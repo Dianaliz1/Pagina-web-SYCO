@@ -3,9 +3,9 @@
 <title>Planes | SYCO</title><meta name="description" content="SYCO: software de gestión para talleres mecánicos.">
 <link rel="icon" type="image/png" href="source/logoS.png" />
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css"></head><body>
+<link rel="stylesheet" href="style.css"><script src="demo.js" defer></script></head><body>
 <header><div class="wrap nav"><a href="index.html" class="logo" aria-label="SYCO, inicio"><img src="source/logo-wordmark.jpg" alt="SYCO"></a>
-<nav><a href="index.html">Inicio</a><a href="funciones.html">Funciones</a><a href="planes.html" class=active>Planes</a><a href="contacto.html">Contacto</a></nav><a class="btn sm" href="contacto.html">Solicita una demo →</a></div></header>
+<nav><a href="index.html">Inicio</a><a href="funciones.html">Funciones</a><a href="planes.html" class=active>Planes</a><a href="contacto.html">Contacto</a></nav><a class="btn sm" href="#demoModal" data-demo>Solicita una demo →</a></div></header>
 <main><section class="page-head"><div class="wrap"><h1 class="metal">Planes mensuales</h1>
 <p>Instalación gratis: SYCO es un sistema web, no hay nada que instalar.</p></div></section>
 <section><div class="wrap"><div class="plans">
@@ -20,6 +20,28 @@
 <details><summary>¿Puedo cambiar de plan?</summary><p>Sí. Puedes agregar usuarios o sucursales cuando tu taller crezca.</p></details>
 <details><summary>¿Cómo funciona el plan A la medida?</summary><p>Cuéntanos qué necesita tu taller y te enviaremos una cotización según las funciones y personalizaciones solicitadas.</p></details></div>
 </div></section></main>
+<div class="modal" id="demoModal" aria-hidden="true">
+  <div class="modal__box" role="dialog" aria-modal="true" aria-labelledby="demoTitle" tabindex="-1">
+    <button class="modal__close" type="button" aria-label="Cerrar">&times;</button>
+    <h2 id="demoTitle">Solicita tu demo de SYCO</h2>
+    <p>Déjanos tus datos y te contactamos para mostrarte lo que puede hacer SYCO por tu taller.</p>
+    <form id="demoForm" data-demo-form>
+      <input type="text" name="nombre" placeholder="Tu nombre" aria-label="Tu nombre" required>
+      <input type="text" name="taller" placeholder="Nombre del taller" aria-label="Nombre del taller" required>
+      <input type="tel" name="telefono" placeholder="Teléfono / WhatsApp" aria-label="Teléfono / WhatsApp" required>
+      <input type="email" name="email" placeholder="Correo electrónico (opcional)" aria-label="Correo electrónico">
+      <select name="plan" aria-label="Plan de interés (opcional)">
+        <option value="">Plan de interés (opcional)</option>
+        <option>Básico</option>
+        <option>Estándar</option>
+        <option>Pro</option>
+        <option>Personalizado</option>
+      </select>
+      <textarea name="mensaje" rows="3" placeholder="¿Algo que quieras contarnos? (opcional)" aria-label="Mensaje opcional"></textarea>
+      <button type="submit" class="btn-demo">Continuar por WhatsApp</button>
+    </form>
+  </div>
+</div>
 <footer><div class="wrap fgrid"><span>Desarrollado por <span class="tc">TECHCODE</span></span>
 <nav><a href="index.html">Inicio</a><a href="funciones.html">Funciones</a><a href="planes.html" class=active>Planes</a><a href="contacto.html">Contacto</a></nav>
 <div class="footer-site"><a href="https://www.instagram.com/syco.mx/" aria-label="Instagram" target="_blank" rel="noopener noreferrer">ig</a><span class="footer-separator" aria-hidden="true"></span><span>www.syco.com.mx</span></div></div></footer></body></html>
